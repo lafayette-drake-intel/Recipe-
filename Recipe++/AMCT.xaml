@@ -1,0 +1,22 @@
+﻿<Window x:Class="Recipe__.AMCT"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Recipe__"
+        mc:Ignorable="d"
+        Title="AMCT" Height="300" Width="700" WindowState="Maximized">
+    <Grid>
+        <Button x:Name="buttonPull"   Content="Pull"   HorizontalAlignment="Left" Margin=" 10,10,0,0" VerticalAlignment="Top" Width="75" Height="25" Click="Click_PullAmct"/>
+        <Button x:Name="buttonFilter" Content="Filter" HorizontalAlignment="Left" Margin="100,10,0,0" VerticalAlignment="Top" Width="75" Height="25" Click="Click_Filter"/>
+        <Button x:Name="clearFilter"  Content="Clear Filter" HorizontalAlignment="Left" Margin="190,10,0,0" VerticalAlignment="Top" Width="75" Height="25" Click="Click_ClearFilter"/>
+
+        <RadioButton x:Name="radioButtonSDX" GroupName="pathGroup" Content="SDX only" HorizontalAlignment="Left" Margin="300,15,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="radioButtonHOP" GroupName="pathGroup" Content="HOP only" HorizontalAlignment="Left" Margin="375,15,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="radioButtonAll" GroupName="pathGroup" Content="ODS only"      HorizontalAlignment="Left" Margin="450,15,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+
+        <Label x:Name="timeLabel" Content="AMCT pull time" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="525,10,0,0"/>
+        <DataGrid x:Name="amTable"  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0" IsReadOnly="True" MouseDoubleClick="Recipe_DoubleClick"/>
+
+    </Grid>
+</Window>

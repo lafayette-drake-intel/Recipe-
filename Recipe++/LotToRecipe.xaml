@@ -1,0 +1,20 @@
+﻿<Window x:Class="Recipe__.LotToRecipe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Recipe__"
+        mc:Ignorable="d"
+        FocusManager.FocusedElement="{Binding ElementName=lot}"
+        Title="LotToRecipe" Height="110" Width="260" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <TextBox x:Name="lot" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25" Margin="20,10,0,0" TextWrapping="Wrap" Text="LotID" VerticalAlignment="Top" Width="100" GotFocus="Lot_GotFocus" LostFocus="Lot_LostFocus" KeyDown="OnEnterDown"/>
+        <!--<TextBox x:Name="operation" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="25" Margin="140,10,0,0" TextWrapping="Wrap" Text="Operation" VerticalAlignment="Top" Width="100" GotFocus="Oper_GotFocus" LostFocus="Oper_LostFocus"/>-->
+        <ComboBox x:Name="operation" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100" Height="25" Margin="140,10,0,0" IsEditable="True">
+            <ComboBoxItem IsSelected="True">129839</ComboBoxItem>
+            <ComboBoxItem>119368</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="button" Content="Pull Recipe" HorizontalAlignment="Left" Margin="150,45,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="PullRecipe_Click"/>
+
+    </Grid>
+</Window>

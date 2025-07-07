@@ -1,0 +1,28 @@
+﻿<Window x:Class="Recipe__.FilterAMCT"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Recipe__"
+        mc:Ignorable="d"
+        Title="Filter AMCT" Height="650" MinWidth="560" MaxWidth="560">
+    <Grid>
+        <Label x:Name="labelLot"     Content="Lot"          HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 10,10,0,0"/>
+        <TextBox x:Name="textLot"    Text=""                HorizontalAlignment="Left" VerticalAlignment="Top" Margin=" 40,10,0,0" Width="80" Height="25" VerticalContentAlignment="Center"/>
+        <Button x:Name="buttonUse"   Content="Use"          HorizontalAlignment="Left" VerticalAlignment="Top" Margin="125,10,0,0" Width="50" Height="25" Click="Click_Use"/>
+        <Button x:Name="buttonClear" Content="Clear Filter" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="305,10,0,0" Width="75" Height="25" Click="Click_ClearFilter"/>
+
+        <Label x:Name="labelEntity"    Content="ENTITY"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="  5,45,0,0"/>
+        <Label x:Name="labelOperation" Content="OPERATION" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,45,0,0"/>
+        <Label x:Name="labelProduct"   Content="PRODUCT"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="265,45,0,0"/>
+        <Label x:Name="labelEvent"     Content="EVENT"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="395,45,0,0"/>
+        <ScrollViewer MinWidth="540" MaxWidth="540" Margin="0,60,0,0" Padding="10" HorizontalAlignment="Left">
+            <Grid >
+                <StackPanel x:Name="entityBox"    HorizontalAlignment="Left" VerticalAlignment="Top" Margin="  0,0,0,0" Width="120" Height="100" Background="GreenYellow"/>
+                <StackPanel x:Name="operationBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,0,0,0" Width="120" Height="100" Background="GreenYellow"/>
+                <StackPanel x:Name="productBox"   HorizontalAlignment="Left" VerticalAlignment="Top" Margin="260,0,0,0" Width="120" Height="100" Background="GreenYellow"/>
+                <StackPanel x:Name="eventBox"     HorizontalAlignment="Left" VerticalAlignment="Top" Margin="390,0,0,0" Width="120" Height="100" Background="GreenYellow"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Window>
